@@ -1,0 +1,19 @@
+2020:05:15 -- 3:55 
+
+    Creacion de la clase verificacion
+        -atributos
+        -constructor
+        -Sobrecarga de metodos Verifica
+        -getters and setters
+    Creacion de paquete de comentarios
+        -txt nicolas
+        -txt arredondo
+        -txt camilo
+    Oriente las ventanas al centro
+    cerre la ventana categirias al elegir una categoria
+    instancie un objeto de la clase verificacion
+        -le envio la palabra y el tamaño de ella
+
+
+    ningun bug 
+.
