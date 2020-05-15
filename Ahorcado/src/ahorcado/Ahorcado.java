@@ -2,7 +2,11 @@ package ahorcado;
 public class Ahorcado {
     
     public static void main(String[] args) {
-        System.out.println("Hola Mundo");
+        
+        Juego ventanaJuego = new Juego();
+        
+        
+        
     }
     
 }
