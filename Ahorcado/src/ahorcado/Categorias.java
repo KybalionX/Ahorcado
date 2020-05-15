@@ -29,7 +29,7 @@ public class Categorias {
                 Palabra = TodasLasCategorías();
                 break;
             case "Aleatorio":
-                CategoriaRandom();
+                Palabra= CategoriaRandom();
                 break;
         }
         
@@ -71,15 +71,38 @@ public class Categorias {
     
     public String CategoriaRandom(){
         
+        Random r = new Random();
+        int x = r.nextInt((4 - 0) + 1) + 0;
         
-        return null;
+        String Palabra="";
+        
+        switch(x){
+            case 0:
+                Palabra =GenerarPalabraRandom(colores);
+                break;
+            case 1:
+                Palabra =GenerarPalabraRandom(animales);
+                break;
+            case 2:
+                Palabra =GenerarPalabraRandom(tiempo);
+                break;
+            case 3:
+                Palabra =GenerarPalabraRandom(biomas);
+                break;
+            case 4: 
+                Palabra =GenerarPalabraRandom(frutas);
+                break;
+        }
+        
+        System.out.println("Palabra: "+Palabra);
+        
+        return Palabra;
     }
     
     public String GenerarPalabraRandom(String[] categoria){
         
         Random r = new Random();
         int x = r.nextInt((categoria.length - 0) + 1) + 0;
-        
         
         return categoria[x];
     }

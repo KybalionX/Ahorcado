@@ -27,27 +27,27 @@ public class Juego extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        canvasLetras = new java.awt.Panel();
+        panelPalabras = new java.awt.Panel();
         btnIntentar = new javax.swing.JButton();
-        fieldLetra = new javax.swing.JTextField();
+        FieldLetra = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout canvasLetrasLayout = new javax.swing.GroupLayout(canvasLetras);
-        canvasLetras.setLayout(canvasLetrasLayout);
-        canvasLetrasLayout.setHorizontalGroup(
-            canvasLetrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panelPalabrasLayout = new javax.swing.GroupLayout(panelPalabras);
+        panelPalabras.setLayout(panelPalabrasLayout);
+        panelPalabrasLayout.setHorizontalGroup(
+            panelPalabrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        canvasLetrasLayout.setVerticalGroup(
-            canvasLetrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelPalabrasLayout.setVerticalGroup(
+            panelPalabrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 60, Short.MAX_VALUE)
         );
 
         btnIntentar.setText("Intentar");
 
-        fieldLetra.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        fieldLetra.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        FieldLetra.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        FieldLetra.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -56,9 +56,9 @@ public class Juego extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(canvasLetras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelPalabras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(fieldLetra, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(FieldLetra, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnIntentar)
                         .addGap(0, 227, Short.MAX_VALUE)))
@@ -68,10 +68,10 @@ public class Juego extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(canvasLetras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelPalabras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(fieldLetra, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(FieldLetra, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
                     .addComponent(btnIntentar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -115,8 +115,8 @@ public class Juego extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JTextField FieldLetra;
     public javax.swing.JButton btnIntentar;
-    public java.awt.Panel canvasLetras;
-    public javax.swing.JTextField fieldLetra;
+    public java.awt.Panel panelPalabras;
     // End of variables declaration//GEN-END:variables
 }
