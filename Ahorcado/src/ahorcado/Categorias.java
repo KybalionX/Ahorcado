@@ -1,5 +1,7 @@
 package ahorcado;
 
+import java.util.Random;
+
 public class Categorias {
 
     String[] colores = {"color", "blanco", "negro", "gris", "rojo", "naranja", "anaranjado", "amarillo",
@@ -17,16 +19,69 @@ public class Categorias {
     String[] frutas={"ciruela","manzana","naranja","palta","durazno","sandia","tomate","pera","mango","platano",
         "limon","papaya","guayaba","mandarina","fresa","cereza"        
     };
-    public void TodasLasCategorías(){
+    
+    public String SeleccionarPalabra(String Categoria){
         
+        String Palabra="";
+        
+        switch(Categoria){
+            case "Todas":
+                Palabra = TodasLasCategorías();
+                break;
+            case "Aleatorio":
+                CategoriaRandom();
+                break;
+        }
+        
+        return Palabra;
     }
     
-    public void SeleccionarCategoria(){
+    public String TodasLasCategorías(){
         
+        String[] SuperCategoria = new String[colores.length+animales.length+tiempo.length+biomas.length+frutas.length];
+        String superior="";
+        
+        for(int i=0; i<colores.length; i++){
+            SuperCategoria[i] = colores[i].toString();
+        }
+        
+        for(int i=0; i<animales.length; i++){
+            SuperCategoria[colores.length+i] = animales[i].toString();
+        }
+        
+        for(int i=0; i<tiempo.length; i++){
+            SuperCategoria[animales.length+colores.length+i] = tiempo[i].toString();
+        }
+        
+        for(int i=0; i<biomas.length; i++){
+            SuperCategoria[tiempo.length+animales.length+colores.length+i] = biomas[i].toString();
+        }
+        
+        for(int i=0; i<frutas.length; i++){
+            SuperCategoria[biomas.length+tiempo.length+animales.length+colores.length+i] = frutas[i].toString();
+        }
+                
+        
+        String palabra = GenerarPalabraRandom(SuperCategoria);
+        
+        return palabra;
     }
     
-    public void CategoriaRandom(){
+    
+    
+    public String CategoriaRandom(){
         
+        
+        return null;
+    }
+    
+    public String GenerarPalabraRandom(String[] categoria){
+        
+        Random r = new Random();
+        int x = r.nextInt((categoria.length - 0) + 1) + 0;
+        
+        
+        return categoria[x];
     }
 
 }
