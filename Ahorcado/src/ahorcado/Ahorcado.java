@@ -76,7 +76,6 @@ public class Ahorcado {
                 }
                 if (Palabra.contains(letraIntento)) {
                     verifica.Verifica(letraIntento);
-                    System.out.println("jajaja");
                 } else {
                     verifica.Verifica();
                 }
