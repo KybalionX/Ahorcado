@@ -63,7 +63,7 @@ public class Ahorcado {
                 for (int i = 0; i < letrasPalabra.length; i++) {
                     System.out.println("\nProbando si " + letraIntento + " se parece a: " + letrasPalabra[i]);
                     if (letraIntento.equals(String.valueOf(letrasPalabra[i]))) {
-                        System.out.println("\nSe parece la letra " + letraIntento + " a la letra " + letrasPalabra[i] + ", que tiene como pos: " + i);
+                        //System.out.println("\nSe parece la letra " + letraIntento + " a la letra " + letrasPalabra[i] + ", que tiene como pos: " + i);
                         fields[i].setText(letraIntento);
                     }
                 }
