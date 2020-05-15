@@ -28,7 +28,6 @@ public class Ahorcado {
         });
         
         
-        
         menu.show();
         
     }
