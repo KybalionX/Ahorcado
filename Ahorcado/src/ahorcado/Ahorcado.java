@@ -5,8 +5,6 @@ public class Ahorcado {
         
         Juego ventanaJuego = new Juego();
         
-        
-        
     }
     
 }
