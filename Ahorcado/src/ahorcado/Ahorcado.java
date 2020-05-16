@@ -14,9 +14,7 @@ public class Ahorcado {
     static Verificacion verifica;
 
     public static void main(String[] args) {
-        Animator anim = new Animator();
-        anim.IniciarAnimacion();
-/*
+        
         MenuPrincipal menu = new MenuPrincipal();
         menu.setLocationRelativeTo(null);
 
@@ -26,21 +24,16 @@ public class Ahorcado {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                
                 String Categoria = menu.ComboCategorias.getSelectedItem().toString();
                 Palabra = seleccionador.SeleccionarPalabra(Categoria);
                 System.out.println("Palabra: " + Palabra);
                 InitJuego(Palabra);
                 menu.dispose();
-                        
-
             }
 
         });
 
         menu.show();
-*/
     }
 
     public static void InitJuego(String Palabra) {

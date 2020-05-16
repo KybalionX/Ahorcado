@@ -40,12 +40,15 @@ public class Verificacion {
     }
 
     private void validacion() {
+        Animator anim = new Animator();
         intentos--;
         if (intentos == 0) {
             if (tamaño == 0) {
                 JOptionPane.showMessageDialog(null, "gano");
             } else {
-                JOptionPane.showMessageDialog(null, "perdio");
+
+                anim.IniciarAnimacion();
+
             }
         } else if (tamaño == 0) {
             JOptionPane.showMessageDialog(null, "gano");

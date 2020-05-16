@@ -1,40 +1,49 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ahorcado;
 
+import Music.Sound;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
+import javax.imageio.ImageIO;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.Timer;
 
-/**
- *
- * @author Nicolas Florez
- */
 public class Animator {
 
     public void IniciarAnimacion() {
 
-        Animation anim = new Animation();
+        Icon icon = new ImageIcon(getClass().getClassLoader().getResource("Animations\\Animacion.gif"));
+        JLabel label = new JLabel(icon);
 
-        anim.setVisible(true);
+        JFrame f = new JFrame("HAS PERDIDO!");
+        f.getContentPane().add(label);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.pack();
+        f.setLocationRelativeTo(null);
 
-        for (int i = 1; i <= 27; i++) {
-            int sleep = 400;
-            ImageIcon frame = new ImageIcon(getClass().getClassLoader().getResource("Frames\\Frame_" + i + ".png"));
-            anim.setSize(frame.getIconWidth(), frame.getIconHeight());
-            anim.Labeler.setIcon(frame);
-            if(i>=13 && i<=23 ){
-                sleep = 100;
+        Sound player = new Sound();
+
+        player.play();
+
+        f.setVisible(true);
+        
+        Timer timer = new Timer(14500, new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                f.setVisible(false);
+                JOptionPane.showMessageDialog(null, "perdio");
             }
-            if(i>=24){
-                sleep=800;
-            }
-            try {
-                Thread.sleep(sleep);
-            } catch (InterruptedException ex) {
-            }
-        }
+        });
+        timer.start();
+        
+
 
     }
 
