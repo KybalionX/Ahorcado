@@ -1,5 +1,6 @@
 package ahorcado;
 
+import Extras.OSChecker;
 import Music.Sound;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,8 +18,18 @@ import javax.swing.Timer;
 public class Animator {
 
     public void IniciarAnimacion() {
+        
+        String path = "";
+        
+        OSChecker checker = new OSChecker();
+        
+        if(checker.isWindows()){
+            path = "Animations//Animacion.gif";
+        }else if(checker.isUnix()){
+            path = "Animations\\Animacion.gif";
+        }
 
-        Icon icon = new ImageIcon(getClass().getClassLoader().getResource("Animations\\Animacion.gif"));
+        Icon icon = new ImageIcon(getClass().getClassLoader().getResource(path));
         JLabel label = new JLabel(icon);
 
         JFrame f = new JFrame("HAS PERDIDO!");

@@ -1,5 +1,6 @@
 package ahorcado;
 
+import Extras.OSChecker;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.TextField;
@@ -17,7 +18,7 @@ public class Ahorcado {
         
         MenuPrincipal menu = new MenuPrincipal();
         menu.setLocationRelativeTo(null);
-
+        
         Categorias seleccionador = new Categorias();
 
         menu.btnIniciar.addActionListener(new ActionListener() {
