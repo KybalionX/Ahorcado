@@ -46,7 +46,6 @@ public class Verificacion {
             if (tamaño == 0) {
                 JOptionPane.showMessageDialog(null, "gano");
             } else {
-
                 anim.IniciarAnimacion();
 
             }

@@ -32,7 +32,7 @@ public class Animator {
         player.play();
 
         f.setVisible(true);
-        
+
         Timer timer = new Timer(14500, new ActionListener() {
 
             @Override
@@ -42,9 +42,6 @@ public class Animator {
             }
         });
         timer.start();
-        
-
 
     }
-
 }
