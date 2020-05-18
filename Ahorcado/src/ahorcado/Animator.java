@@ -25,7 +25,7 @@ public class Animator {
         
         if(checker.isWindows()){
             path = "Animations//Animacion.gif";
-        }else if(checker.isUnix()){
+        }else if(checker.isLinux()){
             path = "Animations\\Animacion.gif";
         }
 

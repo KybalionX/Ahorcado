@@ -28,6 +28,7 @@ public class OSChecker {
             System.out.println("Your OS is not support!!");
         }
     }
+    
 
     public static boolean isWindows() {
 
@@ -39,6 +40,11 @@ public class OSChecker {
 
         return (OS.indexOf("mac") >= 0);
 
+    }
+    
+    public static boolean isLinux(){
+        
+        return (OS.equals("Linux"));
     }
 
     public static boolean isUnix() {

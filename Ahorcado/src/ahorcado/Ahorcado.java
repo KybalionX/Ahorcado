@@ -9,6 +9,8 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 
 public class Ahorcado {
+    
+    
 
     static String CategoriaSeleccionada;
     static String Palabra;
@@ -18,6 +20,10 @@ public class Ahorcado {
         
         MenuPrincipal menu = new MenuPrincipal();
         menu.setLocationRelativeTo(null);
+        
+        String OS = System.getProperty("os.name").toLowerCase();
+        
+        System.out.println("Sistema: "+OS);
         
         Categorias seleccionador = new Categorias();
 
