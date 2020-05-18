@@ -36,14 +36,15 @@ public class Verificacion {
     }
 
     public void Verifica() {
+        intentos--;
         validacion();
     }
 
     private void validacion() {
         Animator anim = new Animator();
-        intentos--;
         if (intentos == 0) {
             if (tamaño == 0) {
+
                 JOptionPane.showMessageDialog(null, "gano");
             } else {
                 anim.IniciarAnimacion();

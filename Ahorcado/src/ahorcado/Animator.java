@@ -26,7 +26,7 @@ public class Animator {
         if(checker.isWindows()){
             path = "Animations//Animacion.gif";
         }else if(checker.isLinux()){
-            path = "Animations\\Animacion.gif";
+            path = "Animations//Animacion.gif";
         }
 
         Icon icon = new ImageIcon(getClass().getClassLoader().getResource(path));

@@ -30,6 +30,9 @@ public class Juego extends javax.swing.JFrame {
         panelPalabras = new java.awt.Panel();
         btnIntentar = new javax.swing.JButton();
         FieldLetra = new javax.swing.JTextField();
+        JpIntentos = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jliNTENTOS = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,6 +52,36 @@ public class Juego extends javax.swing.JFrame {
         FieldLetra.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         FieldLetra.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
+        JpIntentos.setBorder(null);
+
+        jLabel1.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        jLabel1.setForeground(java.awt.Color.red);
+        jLabel1.setText("INTENTOS");
+
+        jliNTENTOS.setFont(new java.awt.Font("Ubuntu", 0, 48)); // NOI18N
+        jliNTENTOS.setBorder(null);
+
+        javax.swing.GroupLayout JpIntentosLayout = new javax.swing.GroupLayout(JpIntentos);
+        JpIntentos.setLayout(JpIntentosLayout);
+        JpIntentosLayout.setHorizontalGroup(
+            JpIntentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JpIntentosLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(JpIntentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jliNTENTOS, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+        JpIntentosLayout.setVerticalGroup(
+            JpIntentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JpIntentosLayout.createSequentialGroup()
+                .addContainerGap(28, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jliNTENTOS, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -61,7 +94,8 @@ public class Juego extends javax.swing.JFrame {
                         .addComponent(FieldLetra, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnIntentar)
-                        .addGap(0, 227, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
+                        .addComponent(JpIntentos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -69,11 +103,13 @@ public class Juego extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(panelPalabras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(FieldLetra, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(btnIntentar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGap(135, 135, 135)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(FieldLetra, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                        .addComponent(btnIntentar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(JpIntentos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -116,7 +152,10 @@ public class Juego extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JTextField FieldLetra;
+    private javax.swing.JPanel JpIntentos;
     public javax.swing.JButton btnIntentar;
+    private javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jliNTENTOS;
     public java.awt.Panel panelPalabras;
     // End of variables declaration//GEN-END:variables
 }
